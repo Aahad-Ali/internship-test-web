@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-head {
+  background-color: transparent;
+}
+.btn {
+  background-color: rgb(255, 96, 90);
+  border-radius: 30px;
+  color: #fff;
+}
+.contact {
+  margin-right: 50%;
+}
+/* .side-img {
+  transform: translate(50%,50%);
+  
+} */
+.card {
+  width: 18rem;
+  border: none;
+  background-color: burlywood;
+}
+.footer {
+  background-color: burlywood;
+  padding: 20px;
+  border-radius: 20px;
+}
+.list-group h3 {
+  color: rgb(43, 177, 255);
+  font-weight: bold;
+}
+.list {
+  background-color: burlywood;
+}
+.list-group {
+  background-color: burlywood;
+}
+.list-group-item {
+  background-color: burlywood;
+}
+.contact h1 {
+  font-weight: bold;
+}
+.footer-btn {
+  background-color: rgb(255, 96, 90);
+}
+.btn-footer {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 340px) {
+  .col {
+    width: 80%;
+  }
+}
