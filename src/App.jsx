@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
@@ -20,36 +19,30 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function App() {
-  const [userName, setuserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [userName, setUserName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    const savePost = async (e) => {
-      e.preventDefault();
-      console.log("userName", userName);
-      console.log("email", email);
-      console.log("phone", phone);
-      console.log("message", message);
 
-      try {
-        const docRef = await addDoc(collection(db, "posts"), {
-          text: userName,
-          text: email,
-          number: phone,
-          text: message,
+  const savePost = async (e) => {
+    e.preventDefault();
 
-          publishDate: serverTimestamp(),
-          // publishDate: new Date().getTime(),
-        });
-        console.log("Document written with ID: ", docRef.id);
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
-    };
-  }, []);
+    console.log("userName: ", userName);
 
+    try {
+
+      const docRef = await addDoc(collection(db, "posts"), {
+        text: userName,
+        // createdOn: new Date().getTime(),
+        createdOn: serverTimestamp(),
+      });
+      console.log("Document written with ID: ", docRef.id);
+
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  }
   return (
     <div className="container">
       <header className="container-head">
@@ -204,7 +197,7 @@ function App() {
       {/* ======================================================================================= */}
 
       <div className="container my-5">
-        <form className="contact" action="#">
+        <form onSubmit={savePost} className="contact" action="#" >
           <h1>Let`s have a chat</h1>
           <div className="input-group mb-3">
             <input
@@ -214,7 +207,7 @@ function App() {
               aria-label="Full Name"
               aria-describedby="basic-addon1"
               onChange={(e) => {
-                setuserName(e.target.value);
+                setUserName(e.target.value)
               }}
             />
           </div>
@@ -224,18 +217,18 @@ function App() {
               type="email"
               className="form-control  my-3"
               placeholder="Email"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+            // onChange={(e) => {
+            //   setEmail(e.target.value);
+            // }}
             />
             {/* <span className="input-group-text">@</span> */}
             <input
               type="number"
               className="form-control mx-3 my-3"
               placeholder="Phone"
-              onChange={(e) => {
-                setPhone(e.target.value);
-              }}
+            // onChange={(e) => {
+            //   setPhone(e.target.value);
+            // }}
             />
           </div>
 
@@ -245,9 +238,9 @@ function App() {
               className="form-control my-3"
               aria-label="With textarea"
               placeholder="Message"
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
+            // onChange={(e) => {
+            //   setMessage(e.target.value);
+            // }}
             ></textarea>
           </div>
           <div>
@@ -308,7 +301,7 @@ function App() {
             </div>
           </div>
           <div className="btn-footer">
-            <button  className="btn footer-btn">Get Quote</button>
+            <button className="btn footer-btn">Get Quote</button>
           </div>
         </div>
       </div>
