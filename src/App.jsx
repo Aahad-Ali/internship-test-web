@@ -255,8 +255,10 @@ function App() {
 
           <div className="container">
             <div className="row">
-              <h1 className="title my-3">Helping Me Success</h1>
-              <div className="col br-img">
+              <h2 className="title my-3 success">
+               <i> Successful teachers successful students</i>
+              </h2>
+              <div className="col br-img my-5">
                 <div className="card-deck">
                   <div className="card my-2 border-out" id="style">
                     <img
@@ -265,7 +267,7 @@ function App() {
                       alt="..."
                     />
                     <div className="card-body">
-                      <h5 className="card-title">Sir Inzamam Malik</h5>
+                      <h5 className="card-title text-center"><strong> Sir Inzamam Malik</strong></h5>
                       {/* <p className="card-text">Teacher</p> */}
                     </div>
                   </div>
@@ -273,8 +275,7 @@ function App() {
               </div>
               {/* ======================================== card two ========================================= */}
 
-
-              <div className="col br-img">
+              <div className="col br-img my-5">
                 <div className="card-deck">
                   <div className="card my-2 border-out" id="style">
                     <img
@@ -283,7 +284,7 @@ function App() {
                       alt="..."
                     />
                     <div className="card-body">
-                      <h5 className="card-title">Sir Salman Zafar</h5>
+                      <h5 className="card-title text-center"><strong> Sir Salman Zafar</strong></h5>
                       {/* <p className="card-text">Associate</p> */}
                     </div>
                   </div>
@@ -291,8 +292,7 @@ function App() {
               </div>
               {/* ======================================== card two ========================================= */}
 
-
-              <div className="col br-img">
+              <div className="col br-img my-5">
                 <div className="card-deck">
                   <div className="card my-2 border-out" id="style">
                     <img
@@ -301,7 +301,7 @@ function App() {
                       alt="..."
                     />
                     <div className="card-body">
-                      <h5 className="card-title">Sir Saad Ahmed</h5>
+                      <h5 className="card-title text-center"><strong> Sir Saad Ahmed</strong></h5>
                       {/* <p className="card-text">Associate</p> */}
                     </div>
                   </div>
@@ -309,8 +309,7 @@ function App() {
               </div>
               {/* ======================================== card two ========================================= */}
 
-
-              <div className="col br-img">
+              <div className="col br-img my-5">
                 <div className="card-deck">
                   <div className="card my-2 border-out" id="style">
                     <img
@@ -319,13 +318,22 @@ function App() {
                       alt="..."
                     />
                     <div className="card-body">
-                      <h5 className="card-title">Sir Siddique</h5>
+                      <h5 className="card-title text-center"><strong> Sir Siddique</strong></h5>
                       {/* <p className="card-text">Associate</p> */}
                     </div>
                   </div>
                 </div>
               </div>
               {/* ======================================== card two ========================================= */}
+              <div className="copyright">
+                <p className="text-center center my-3">
+                  <i>
+                    <strong>
+                      <q>Teachers is a backbone of your success</q>
+                    </strong>
+                  </i>
+                </p>
+              </div>
             </div>
           </div>
 

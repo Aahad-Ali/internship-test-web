@@ -59,8 +59,10 @@ margin-top: 50px;
 .card {
   width: 18rem;
   border: none;
-  background-color: rgb(255, 236, 211);
 
+}
+.col .card-deck .border-out .card-img-top{
+  border-radius: 50%;
 }
 .card img{
   border-radius: 10px;
@@ -92,6 +94,24 @@ margin-top: 50px;
 .btn-footer {
   display: flex;
   justify-content: center;
+}
+.success{
+  font-weight: bold;
+  
+}
+.center{
+  color: red;
+}
+.copyright{
+  background-color: rgb(255, 236, 213);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.rounded{
+  height: 24vh;
+}
+.footer .row .col .card .card-body{
+  background-color:rgb(255, 236, 211) ;
 }
 
 @media screen and (max-width: 340px) {
